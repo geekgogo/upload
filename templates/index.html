@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename = 'favicon.ico') }}" type="image/x-ico">
+</head>
+<body>
+
+<div id="container">
+
+    <div id="header" style="background-color:#93b5cf; height: 50px;">
+        <h3 style="margin-bottom:0; color:#EEEEEE; text-align: center; padding-top: 10px">上传文件</h3></div>
+
+    <div id="top" style="background-color:white;float:left; height: 50px; width:2000px">
+        <form id="form1" method="post" action="/api/upload" enctype="multipart/form-data">
+            <input id="File1" type="file" name="myfile"/>  <!--后台代码中获取文件是通过form的name来标识的-->
+            <input type="submit">提交</input>
+        </form>
+    </div>
+
+    <div id="content" style="background-color:#EEEEEE;height: 600px;padding-top: 60px">
+        内容在这里
+    </div>
+
+
+    <div id="footer" style="background-color:#93b5cf;clear:both;text-align:center;float: bottom">
+
+    </div>
+
+</div>
+
+</body>
+</html>
